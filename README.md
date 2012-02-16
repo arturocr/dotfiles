@@ -1,4 +1,4 @@
-My (jarias) default dotfiles!
+My (arturocr) default dotfiles!
 
 Use [homesick](https://github.com/technicalpickles/homesick) to installed
 
