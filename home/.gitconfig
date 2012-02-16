@@ -1,5 +1,8 @@
 [user]
-  name = Julio Arias
+  name = Arturo Campos
+  email = arturo025@gmail.com
+[github]
+  user = arturocr
 [alias]
   co = checkout
   cm = commit
@@ -20,6 +23,7 @@
   branch = auto
   ui = true
 [core]
+  askpass = /Users/arturo/git-password
   excludesfile = ~/.gitignore
   editor = subl -w
 [apply]
