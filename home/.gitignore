@@ -8,3 +8,8 @@
 *~
 .rbx
 *.rbc
+*.classpath
+*.project
+.settings
+*.sublime-project
+*.sublime-workspace

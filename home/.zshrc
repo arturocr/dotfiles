@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="jarias"
+ZSH_THEME="robbyrussell"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -33,4 +33,4 @@ source ~/.shell/aliases
 source ~/.shell/paths
 source ~/.shell/config
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
