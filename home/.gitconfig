@@ -23,7 +23,6 @@
     branch = auto
     ui = true
 [core]
-    askpass = /Users/arturo/git-password
     excludesfile = /Users/arturo/.gitignore
     editor = subl -w
 [apply]
