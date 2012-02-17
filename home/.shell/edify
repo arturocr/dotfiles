@@ -11,9 +11,12 @@ alias dbcleanbe="cd ~/Sites/DynamicBooks/clv2-core/ ; ./clean-backend.sh"
 alias dbsvn="~/Sites/DynamicBooks/clv2-core/start-svn.sh"
 alias dbloaddump="~/db-data/load-dump.sh"
 alias dbbuild="mvn clean install -Dmaven.test.skip=true"
-alias dbimport-books='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/books/book.csv" -Dimport.basepath="/Users/arturo/db-data/books" -Dimport.filetype=books'
-alias dbimport-supp='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/books/supplements.csv" -Dimport.basepath="/Users/arturo/db-data/books" -Dimport.filetype=supplements'
-alias dbimport-media='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/media/media-assets-min.csv" -Dimport.basepath="/Users/arturo/db-data/media" -Dimport.filetype=media-assets'
+alias dbimport-books='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/books.csv" -Dimport.basepath="/Users/arturo/db-data" -Dimport.filetype=books'
+alias dbimport-obooks='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/openBooks.csv" -Dimport.basepath="/Users/arturo/db-data" -Dimport.filetype=books'
+alias dbimport-supp='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/supplements.csv" -Dimport.basepath="/Users/arturo/db-data" -Dimport.filetype=supplements'
+alias dbimport-media='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/media-assets.csv" -Dimport.basepath="/Users/arturo/db-data" -Dimport.filetype=media-assets'
+alias dbimport-flash='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/flash-swf.csv" -Dimport.basepath="/Users/arturo/db-data" -Dimport.filetype=flash-swf'
+alias dbimport-dcr='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/shockwave-dcr.csv" -Dimport.basepath="/Users/arturo/db-data" -Dimport.filetype=shockwave-dcr'
 function dbdeploy() {
     if [ -d $CATALINA_HOME/webapps/dynamicbooks ] ; then
         rm -r $CATALINA_HOME/webapps/dynamicbooks

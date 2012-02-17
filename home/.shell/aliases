@@ -14,14 +14,15 @@ alias gun='git unstage'
 alias gts='git staged'
 alias gdf='git unstaged'
 alias ga='git add . ; git status'
+alias gau='git add -u ; git status'
 
 # Command Enhancements
 
 # Utility
 alias reload='source ~/.zshrc'
 alias edit-zsh='subl ~/.zshrc'
-alias edit-hosts="sudo subl /private/etc/hosts"
-alias edit-vhosts="sudo subl /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf"
+alias edit-hosts="sudo subl /etc/hosts"
+alias edit-vhosts="sudo subl /etc/apache2/extra/httpd-vhosts.conf"
 alias serve="python -m SimpleHTTPServer"
 alias psx="ps ax | grep $1"
 alias flushcache="dscacheutil -flushcache"
@@ -79,6 +80,11 @@ alias tm='top -o vsize' # memory
 
 # Ruby
 alias r="rake"
+
+# Apache
+alias apch-up="sudo apachectl start"
+alias apch-dwn="sudo apachectl stop"
+alias apch-rst="sudo apachectl graceful"
 
 # Tomcat
 alias tomapps="open $CATALINA_HOME/webapps"
