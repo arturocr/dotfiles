@@ -1,5 +1,8 @@
+# Android screencast alias
+# alias ads="javaws ~/androidscreencast.jnlp"
+
 # Git
-alias st='git status'
+alias gst='git status'
 alias gpl='git smart-pull'
 alias gps='git push'
 alias gt='git track'
@@ -16,36 +19,20 @@ alias ga='git add . ; git status'
 
 # Utility
 alias reload='source ~/.zshrc'
+alias edit-zsh='subl ~/.zshrc'
+alias edit-hosts="sudo subl /private/etc/hosts"
+alias edit-vhosts="sudo subl /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf"
+alias serve="python -m SimpleHTTPServer"
+alias psx="ps ax | grep $1"
+alias flushcache="dscacheutil -flushcache"
 
 # Quicker cd
 alias ..="cd .."
 
 # My Code folder
-edify() {
-  if [ -f $DROPBOX_HOME/etc/api-edify.keys ]; then
-    . $DROPBOX_HOME/etc/api-edify.keys
-  fi
+code() {
+  cd ~/Sites/
 }
-jarias() {
-  if [ -f $DROPBOX_HOME/etc/api.keys ]; then
-    . $DROPBOX_HOME/etc/api.keys
-  fi
-}
-
-k() {
- if [[ "$*" =~ edify* ]]; then
- 	edify
- else
- 	jarias
- fi
- cd ~/Code/$1
-}
-
-_k() { _files -W ~/Code -/; }
-compdef _k k
-
-alias g='gradle'
-alias gtr='GRADLE_OPTS="-javaagent:$REBEL_HOME/jrebel.jar -Drebel.log4j-plugin=false $JAVA_OPTS" g tomcatRun'
 
 # Common -- Some are from Damian Conway
 alias ls='ls -G'
@@ -92,3 +79,10 @@ alias tm='top -o vsize' # memory
 
 # Ruby
 alias r="rake"
+
+# Tomcat
+alias tomapps="open $CATALINA_HOME/webapps"
+alias tomup="catalina start"
+alias tomdown="catalina stop"
+alias tomdebug="catalina jpda start"
+alias tomlog="tail -f $CATALINA_HOME/logs/catalina.out"
