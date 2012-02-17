@@ -1,51 +1,51 @@
 [user]
-  name = Arturo Campos
-  email = arturo025@gmail.com
+    name = Arturo Campos
+    email = arturo025@gmail.com
 [github]
-  user = arturocr
+    user = arturocr
 [alias]
-  co = checkout
-  cm = commit
-  # Log display from screencast, with train tracks.
-  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-  # Alternate log display from Scott Chacon
-  lol = log --pretty=oneline --abbrev-commit --graph --decorate
-  # Other useful aliases:
-  unstage = reset HEAD
-  staged = diff --cached
-  unstaged = diff
-  current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
-  # Usage: git track origin/feature-123-login-form
-  track = checkout -t
+    co = checkout
+    cm = commit
+    # Log display from screencast, with train tracks.
+    l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+    # Alternate log display from Scott Chacon
+    lol = log --pretty=oneline --abbrev-commit --graph --decorate
+    # Other useful aliases:
+    unstage = reset HEAD
+    staged = diff --cached
+    unstaged = diff
+    current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+    # Usage: git track origin/feature-123-login-form
+    track = checkout -t
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
 [core]
-  askpass = /Users/arturo/git-password
-  excludesfile = /Users/arturo/.gitignore
-  editor = subl -w
+    askpass = /Users/arturo/git-password
+    excludesfile = /Users/arturo/.gitignore
+    editor = subl -w
 [apply]
-  whitespace = nowarn
+    whitespace = nowarn
 [heroku]
-  account = personal
+    account = personal
 [difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
-  prompt = false
+    prompt = false
 [diff]
-  tool = Kaleidoscope
+    tool = Kaleidoscope
 [help]
-  autocorrect = 1
+    autocorrect = 1
 [status]
-  submodule = 1
+    submodule = 1
 [push]
-  # Only push branches that have been set up to track a remote branch.
-  default = current
+    # Only push branches that have been set up to track a remote branch.
+    default = current
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+    cmd = /Applications/Kaleidoscope.app/Contents/MacOS/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+    path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
