@@ -24,7 +24,7 @@
   ui = true
 [core]
   askpass = /Users/arturo/git-password
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/arturo/.gitignore
   editor = subl -w
 [apply]
   whitespace = nowarn
@@ -43,3 +43,9 @@
 [push]
   # Only push branches that have been set up to track a remote branch.
   default = current
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
