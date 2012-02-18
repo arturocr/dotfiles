@@ -81,11 +81,6 @@ alias tm='top -o vsize' # memory
 # Ruby
 alias r="rake"
 
-# Apache
-alias apch-up="sudo apachectl start"
-alias apch-dwn="sudo apachectl stop"
-alias apch-rst="sudo apachectl graceful"
-
 # Tomcat
 alias tomapps="open $CATALINA_HOME/webapps"
 alias tomup="catalina start"
