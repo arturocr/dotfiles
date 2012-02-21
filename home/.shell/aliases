@@ -32,7 +32,7 @@ alias ..="cd .."
 
 # My Code folder
 code() {
-  cd ~/Sites/
+  cd ~/Projects/
 }
 
 # Common -- Some are from Damian Conway
