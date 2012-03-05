@@ -34,10 +34,10 @@ function dbdeploy() {
 
 function dbcontent() {
     echo "Creating static content symlink..."
-    if [ -d $CATALINA_HOME/webapps/dynamicbooks/content ] ; then
-        echo "'content' folder already exists!"
+    if [ -d $CATALINA_HOME/webapps/dynamicbooks/dynamicbooks-content ] ; then
+        echo "'dynamicbooks-content' folder already exists!"
     else
-        ln -s ~/Sites/dynamicbooks-static $CATALINA_HOME/webapps/dynamicbooks/content
+        ln -s ~/db-data $CATALINA_HOME/webapps/dynamicbooks/dynamicbooks-content
         echo "Symlink created!"
     fi
     sleep 1

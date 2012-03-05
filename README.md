@@ -4,7 +4,7 @@ Use [homesick](https://github.com/technicalpickles/homesick) to installed
 
 # LICENSE:
 
-Copyright (c) 2011 Julio Arias
+Copyright (c) 2012 Arturo Campos
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
