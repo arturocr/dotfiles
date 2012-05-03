@@ -27,8 +27,16 @@ alias serve="python -m SimpleHTTPServer"
 alias psx="ps ax | grep $1"
 alias flushcache="dscacheutil -flushcache"
 
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
 # Quicker cd
 alias ..="cd .."
+alias ...="cd ../.."
+
+# Empty the Trash on all mounted volumes and the main HDD
+# Also, clear Apple’s System Logs to improve shell startup speed
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # My Code folder
 code() {
@@ -42,8 +50,8 @@ alias la="ls -A -l -G"
 alias c='clear'
 alias cdd='cd -'  # goto last dir cd'ed from
 alias cl='clear; l'
-function cdc() { 
-    cd $1; ls 
+function cdc() {
+    cd $1; ls
 }
 alias cls='clear; ls'
 alias h='history'
@@ -58,7 +66,7 @@ alias s='cd ..'   # up one dir
 
 function take() {
     mkdir -p "$1"
-    cd "$1" 
+    cd "$1"
 }
 
 alias e='exit'
