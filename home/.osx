@@ -77,7 +77,7 @@ defaults write com.apple.screencapture location -string "$HOME/Desktop"
 defaults write com.apple.screencapture type -string "png"
 
 # Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool true
+# defaults write com.apple.finder QuitMenuItem -bool true
 
 # Disable window animations and Get Info animations in Finder
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -102,7 +102,7 @@ defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Display full POSIX path as Finder window title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -160,7 +160,7 @@ defaults write com.apple.Dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Enable the 2D Dock
-# defaults write com.apple.dock no-glass -bool true
+defaults write com.apple.dock no-glass -bool true
 
 # Automatically hide and show the Dock
 # defaults write com.apple.dock autohide -bool true
@@ -242,5 +242,5 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 # unset file
 
 # Kill affected applications
-# for app in Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer; do killall "$app" > /dev/null 2>&1; done
+for app in Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer; do killall "$app" > /dev/null 2>&1; done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
