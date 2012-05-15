@@ -95,3 +95,7 @@ alias tomup="catalina start"
 alias tomdown="catalina stop"
 alias tomdebug="catalina jpda start"
 alias tomlog="tail -f /usr/local/Cellar/tomcat/6.0.30/libexec/logs/catalina.out"
+
+function canary(){
+   open -a "Google Chrome Canary" --args --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-user-data" $1
+}
