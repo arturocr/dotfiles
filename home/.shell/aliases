@@ -99,3 +99,7 @@ alias tomlog="tail -f /usr/local/Cellar/tomcat/6.0.30/libexec/logs/catalina.out"
 function canary(){
    open -a "Google Chrome Canary" --args --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-user-data" $1
 }
+
+# PetBack Aliases
+alias pb="clear ; cd ~/Projects/petback ; echo '========================== PetBack ========================='"
+alias pbsubl="subl ~/Projects/petback"
