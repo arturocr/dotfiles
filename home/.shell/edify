@@ -32,17 +32,7 @@ function dbdeploy() {
     fi
 }
 
-function dbcontent() {
-    echo "Creating static content symlink..."
-    if [ -d $CATALINA_HOME/webapps/dynamicbooks/dynamicbooks-content ] ; then
-        echo "'dynamicbooks-content' folder already exists!"
-    else
-        ln -s ~/db-data $CATALINA_HOME/webapps/dynamicbooks/dynamicbooks-content
-        echo "Symlink created!"
-    fi
-}
-
-function dblive() {
+function dbsymlink() {
     echo "Removing deployed directories..."
     rm -rf $CATALINA_HOME/webapps/dynamicbooks/css
     rm -rf $CATALINA_HOME/webapps/dynamicbooks/img
@@ -54,5 +44,12 @@ function dblive() {
     ln -s ~/Sites/DynamicBooks/dynamicbooks-web/src/main/webapp/js $CATALINA_HOME/webapps/dynamicbooks/js
     ln -s ~/Sites/DynamicBooks/dynamicbooks-web/src/main/webapp/swf $CATALINA_HOME/webapps/dynamicbooks/swf
     ln -s ~/Sites/DynamicBooks/dynamicbooks-web/src/main/webapp/WEB-INF/view $CATALINA_HOME/webapps/dynamicbooks/WEB-INF/view
-    echo "Symlinks created!"
+    echo "Deploy symlinks created!"
+    echo "Creating static content symlink..."
+    if [ -d $CATALINA_HOME/webapps/dynamicbooks/dynamicbooks-content ] ; then
+        echo "'dynamicbooks-content' folder already exists!"
+    else
+        ln -s ~/db-data $CATALINA_HOME/webapps/dynamicbooks/dynamicbooks-content
+        echo "Static content symlink created!"
+    fi
 }
