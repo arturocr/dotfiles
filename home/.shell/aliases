@@ -91,10 +91,11 @@ alias r="rake"
 
 # Tomcat
 alias simulateProd="SPRING_PROFILES_ACTIVE=production"
+alias checktomcat="~/tomcat-check.sh"
 alias tomapps="open $CATALINA_HOME/webapps"
-alias tomup="catalina start"
+alias tomup="catalina start ; checktomcat ; dbsymlink"
 alias tomdown="catalina stop"
-alias tomdebug="catalina jpda start"
+alias tomdebug="catalina jpda start ; checktomcat ; dbsymlink"
 alias tomlog="tail -f /usr/local/Cellar/tomcat/6.0.30/libexec/logs/catalina.out"
 
 function canary(){
