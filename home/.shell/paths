@@ -8,7 +8,7 @@ export PATH="/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbi
 export GROOVY_HOME="$(brew --prefix groovy)/libexec"
 export GRAILS_HOME="$(brew --prefix grails)/libexec"
 export NODE_PATH="/usr/local/lib/node_modules"
-export ANDROID_SDK_ROOT="$(brew --prefix android-sdk)"
+export ANDROID_SDK_ROOT="$HOME/android/android-sdk"
 
 # Amazon EC2
 export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
