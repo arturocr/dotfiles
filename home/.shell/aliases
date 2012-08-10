@@ -1,5 +1,5 @@
 # Android screencast alias
-# alias ads="javaws ~/androidscreencast.jnlp"
+alias ads="javaws ~/android/androidscreencast.jnlp"
 
 # Git
 alias gst='git status'
