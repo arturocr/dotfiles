@@ -38,3 +38,6 @@ source ~/.shell/config
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 __rvm_project_rvmrc
+
+fpath=($HOME/.zsh/func $fpath)
+typeset -U fpath
