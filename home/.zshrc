@@ -41,3 +41,6 @@ __rvm_project_rvmrc
 
 fpath=($HOME/.zsh/func $fpath)
 typeset -U fpath
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

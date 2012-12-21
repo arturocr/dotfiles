@@ -17,7 +17,8 @@ alias dbimport-supp='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.M
 alias dbimport-media='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/media-assets.csv" -Dimport.basepath="/Users/arturo/db-data" -Dimport.filetype=media-assets'
 alias dbimport-flash='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/flash-swf.csv" -Dimport.basepath="/Users/arturo/db-data" -Dimport.filetype=flash-swf'
 alias dbimport-dcr='mvn exec:java -Dexec.mainClass="com.dynamicbooks.importer.Main" -Dexec.args="%classpath" -Dexec.includeProjectDependencies="true" -Dimport.csv="/Users/arturo/db-data/shockwave-dcr.csv" -Dimport.basepath="/Users/arturo/db-data" -Dimport.filetype=shockwave-dcr'
-function dbdeploy() {
+
+function deploy-dbooks() {
     if [ -d $CATALINA_HOME/webapps/dynamicbooks ] ; then
         rm -r $CATALINA_HOME/webapps/dynamicbooks
     fi
@@ -30,6 +31,9 @@ function dbdeploy() {
     else
         echo "There's not a war ready for deploy..."
     fi
+}
+
+function deploy-dbooks-admin() {
     if [ -d $CATALINA_HOME/webapps/dynamicbooks-admin ] ; then
         rm -r $CATALINA_HOME/webapps/dynamicbooks-admin
     fi
@@ -44,7 +48,7 @@ function dbdeploy() {
     fi
 }
 
-function dbsymlink() {
+function symlink-dbooks() {
     echo "Removing deployed directories..."
     rm -rf $CATALINA_HOME/webapps/dynamicbooks/css
     rm -rf $CATALINA_HOME/webapps/dynamicbooks/img
@@ -57,6 +61,10 @@ function dbsymlink() {
     ln -s ~/Sites/DynamicBooks/dynamicbooks-web/src/main/webapp/swf $CATALINA_HOME/webapps/dynamicbooks/swf
     ln -s ~/Sites/DynamicBooks/dynamicbooks-web/src/main/webapp/WEB-INF/view $CATALINA_HOME/webapps/dynamicbooks/WEB-INF/view
     echo "Deploy symlinks created!"
+    symlink-dbooks-content
+}
+
+function symlink-dbooks-admin() {
     echo "Removing deployed admin directories..."
     rm -rf $CATALINA_HOME/webapps/dynamicbooks-admin/css
     rm -rf $CATALINA_HOME/webapps/dynamicbooks-admin/img
@@ -66,6 +74,10 @@ function dbsymlink() {
     ln -s ~/Sites/DynamicBooks/dynamicbooks-web-admin/src/main/webapp/img $CATALINA_HOME/webapps/dynamicbooks-admin/img
     ln -s ~/Sites/DynamicBooks/dynamicbooks-web-admin/src/main/webapp/js $CATALINA_HOME/webapps/dynamicbooks-admin/js
     ln -s ~/Sites/DynamicBooks/dynamicbooks-web-admin/src/main/webapp/WEB-INF/view $CATALINA_HOME/webapps/dynamicbooks-admin/WEB-INF/view
+    echo "Deploy symlinks created!"
+}
+
+function symlink-dbooks-content() {
     echo "Creating static content symlink..."
     if [ -d $CATALINA_HOME/webapps/dynamicbooks/dynamicbooks-content ] ; then
         echo "'dynamicbooks-content' folder already exists!"
@@ -74,3 +86,8 @@ function dbsymlink() {
         echo "Static content symlink created!"
     fi
 }
+
+alias dbooks-up="tomup ; checktomcat ; symlink-dbooks"
+alias dbooks-debug="tomdebug ; checktomcat ; symlink-dbooks"
+alias dbooks-admin-up="tomup ; checktomcat ; symlink-dbooks-admin"
+alias dbooks-admin-debug="tomdebug ; checktomcat ; symlink-dbooks-admin"
