@@ -96,3 +96,4 @@ alias dbooks-admin-debug="tomdebug ; checktomcat ; symlink-dbooks-admin"
 alias clcore="clear ; cd ~/Sites/CLcore ; echo '========================== CLcore ========================='"
 alias clweb="clear ; cd ~/Sites/CLweb ; echo '========================== CLweb ========================='"
 alias clsubl="subl ~/Dropbox/Edify/SublimeProjects/CL.sublime-project"
+export CLCORE_FS_BASE_PATH=~/.clweb
