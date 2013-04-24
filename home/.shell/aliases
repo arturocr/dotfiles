@@ -25,7 +25,8 @@ alias edit-hosts="sudo subl /etc/hosts"
 alias edit-vhosts="sudo subl /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf"
 alias serve="python -m SimpleHTTPServer"
 alias psx="ps ax | grep $1"
-alias flushcache="dscacheutil -flushcache"
+alias flushdnscache="sudo killall -HUP mDNSResponder"
+alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
@@ -102,7 +103,3 @@ alias generateTomcatProject="mvn -o org.apache.maven.plugins:maven-eclipse-plugi
 function canary(){
    open -a "Google Chrome Canary" --args --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-user-data" $1
 }
-
-# PetBack Aliases
-alias pb="clear ; cd ~/Projects/petback ; echo '========================== PetBack ========================='"
-alias pbsubl="subl ~/Projects/petback"
