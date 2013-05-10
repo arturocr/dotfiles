@@ -16,6 +16,9 @@ alias gdf='git unstaged'
 alias ga='git add . ; git status'
 alias gau='git add -u ; git status'
 
+# tig
+alias tst='tig status'
+
 # Command Enhancements
 
 # Utility
