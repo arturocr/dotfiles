@@ -97,11 +97,11 @@ alias r="rake"
 alias simulateProd="SPRING_PROFILES_ACTIVE=production"
 alias checktomcat="~/.tomcat-check"
 alias tomapps="open $CATALINA_HOME/webapps"
-alias tomup="$CATALINA_HOME/bin/catalina.sh start"
-alias tomdown="$CATALINA_HOME/bin/catalina.sh stop"
-alias tomdebug="$CATALINA_HOME/bin/catalina.sh jpda start"
+alias tomup="sh $CATALINA_HOME/bin/catalina.sh start"
+alias tomdown="sh $CATALINA_HOME/bin/catalina.sh stop"
+alias tomdebug="sh $CATALINA_HOME/bin/catalina.sh jpda start"
 alias tomlog="tail -f $CATALINA_HOME/logs/catalina.out"
-alias generateTomcatProject="mvn -o org.apache.maven.plugins:maven-eclipse-plugin:2.6:eclipse"
+alias generateEclipseProject="mvn -o org.apache.maven.plugins:maven-eclipse-plugin:2.6:eclipse"
 
 function canary(){
    open -a "Google Chrome Canary" --args --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-user-data" $1
