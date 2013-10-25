@@ -106,3 +106,7 @@ alias generateEclipseProject="mvn -o org.apache.maven.plugins:maven-eclipse-plug
 function canary(){
    open -a "Google Chrome Canary" --args --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-user-data" $1
 }
+
+function changeJava() {
+    export JAVA_HOME="$(/usr/libexec/java_home -v 1.$1)"
+}

@@ -1,4 +1,5 @@
-export JAVA_HOME="$(/usr/libexec/java_home)"
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
+# export JAVA_HOME="$(/usr/libexec/java_home)"
 export ANT_HOME="/usr/share/ant"
 export CATALINA_HOME="/Library/Tomcat/Home"
 
