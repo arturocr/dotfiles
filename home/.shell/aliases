@@ -110,3 +110,10 @@ function canary(){
 function changeJava() {
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.$1)"
 }
+
+# Vagrant
+alias vg="vagrant"
+alias vgup="vg up"
+alias vghalt="vg halt"
+alias vgsusp="vg suspend"
+alias vgssh="vg ssh"

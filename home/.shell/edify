@@ -62,7 +62,9 @@ function symlink-dbooks-content() {
 alias dbooks-up="tomup ; checktomcat ; symlink-dbooks"
 alias dbooks-debug="tomdebug ; checktomcat ; symlink-dbooks"
 
-# CLweb
-alias clcore="clear ; cd ~/Sites/CLcore ; echo '========================== CLcore ========================='"
-alias clweb="clear ; cd ~/Sites/CLweb ; echo '========================== CLweb ========================='"
-alias clsubl="subl ~/Dropbox/Edify/SublimeProjects/CL.sublime-project"
+# Hotchalk
+alias course-lib="clear ; cd ~/Sites/teachLearn ; echo '========================== Course Library ========================='"
+alias hotchalk-cl="course-lib ; cd common-library"
+alias hotchalk-clcore="hotchalk-cl ; cd CLcore"
+alias hotchalk-clws="hotchalk-cl ; cd CLws"
+alias hotchalk-clui="hotchalk-cl ; cd CLui"
