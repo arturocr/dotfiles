@@ -1,9 +1,3 @@
-# Alias directories for quick access - links often work better but these are helpful
-alias atn="clear ; cd ~/Sites/atheneo ; echo '========================== Atheneo ========================='"
-alias atnmate="subl ~/Sites/atheneo"
-alias atnssh="ssh dev@dev.atheneo.net"
-alias atninfo="subl $DROPBOX_HOME/Edify/server\ notes.yml"
-
 # Dynamic Books Aliases
 alias db="clear ; cd ~/Sites/DynamicBooks ; echo '========================== DynamicBooks ========================='"
 alias dbsubl="subl ~/Sites/DynamicBooks/DynamicBooks.sublime-project"

@@ -1,6 +1,3 @@
-# Android screencast alias
-alias ads="javaws ~/android/androidscreencast.jnlp"
-
 # Git
 alias gst='git status'
 alias gpl='git smart-pull'
@@ -25,7 +22,6 @@ alias tst='tig status'
 alias reload='source ~/.zshrc'
 alias edit-zsh='subl ~/.zshrc'
 alias edit-hosts="sudo subl /etc/hosts"
-alias edit-vhosts="sudo subl /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf"
 alias serve="python -m SimpleHTTPServer"
 alias psx="ps ax | grep $1"
 alias flushdnscache="sudo killall -HUP mDNSResponder"
@@ -117,3 +113,14 @@ alias vgup="vg up"
 alias vghalt="vg halt"
 alias vgsusp="vg suspend"
 alias vgssh="vg ssh"
+
+# Apache
+alias edit-httpdconf-global="subl /etc/apache2/httpd.conf"
+alias edit-httpdconf-mine="subl /etc/apache2/users/arturo.conf"
+alias edit-vhosts="sudo subl /etc/apache2/extra/httpd-vhosts.conf"
+
+# Freelance
+alias atn="clear ; cd ~/Sites/atheneo ; echo '========================== Atheneo ========================='"
+alias atnmate="subl ~/Sites/atheneo"
+alias atnssh="ssh dev@dev.atheneo.net"
+alias atninfo="subl $DROPBOX_HOME/freelance/Knowledge\ Elements/server\ notes.yml"
