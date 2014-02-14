@@ -118,6 +118,10 @@ alias vgssh="vg ssh"
 alias edit-httpdconf-global="subl /etc/apache2/httpd.conf"
 alias edit-httpdconf-mine="subl /etc/apache2/users/arturo.conf"
 alias edit-vhosts="sudo subl /etc/apache2/extra/httpd-vhosts.conf"
+alias apacheup="sudo apachectl start"
+alias apachedown="sudo apachectl stop"
+alias apacherestart="sudo apachectl restart"
+alias apachetest="sudo apachectl -t"
 
 # Freelance
 alias atn="clear ; cd ~/Sites/atheneo ; echo '========================== Atheneo ========================='"
