@@ -35,6 +35,9 @@ source ~/.shell/edify
 source ~/.shell/paths
 source ~/.shell/config
 
+# Powerline binding
+source $POWERLINE_PATH/bindings/zsh/powerline.zsh
+
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 __rvm_project_rvmrc
