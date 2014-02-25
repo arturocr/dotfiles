@@ -15,6 +15,3 @@ export NODE_PATH="/usr/local/lib/node_modules"
 # export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
 # export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 # export EC2_HOME="$(brew --prefix ec2-api-tools)/jars"
-
-# Powerline
-export POWERLINE_PATH=$(python -c 'import pkgutil; print pkgutil.get_loader("powerline").filename')
