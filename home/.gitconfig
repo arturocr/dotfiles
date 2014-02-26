@@ -42,8 +42,6 @@
     editor = subl -w
 [apply]
     whitespace = nowarn
-[heroku]
-    account = personal
 [difftool "Kaleidoscope"]
     cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
@@ -57,3 +55,6 @@
 [push]
     # Only push branches that have been set up to track a remote branch.
     default = current
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
