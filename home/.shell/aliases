@@ -117,7 +117,7 @@ alias vgssh="vg ssh"
 # Apache
 alias edit-httpdconf-global="subl /etc/apache2/httpd.conf"
 alias edit-httpdconf-mine="subl /etc/apache2/users/arturo.conf"
-alias edit-vhosts="sudo subl /etc/apache2/extra/httpd-vhosts.conf"
+alias edit-vhosts="subl /etc/apache2/extra/httpd-vhosts.conf"
 alias apacheup="sudo apachectl start"
 alias apachedown="sudo apachectl stop"
 alias apacherestart="sudo apachectl restart"
