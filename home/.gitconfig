@@ -23,7 +23,7 @@
     diff = auto
     status = auto
     branch = auto
-    ui = true
+	ui = always
 [color "branch"]
     current = yellow reverse
     local = yellow

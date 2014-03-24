@@ -128,6 +128,9 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+# Show all hidden files
+defaults write com.apple.Finder AppleShowAllFiles YES
+
 # Hot corners
 # Top left screen corner → Mission Control
 # defaults write com.apple.dock wvous-tl-corner -int 2

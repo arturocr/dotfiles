@@ -34,6 +34,7 @@ source ~/.shell/almendra
 source ~/.shell/edify
 source ~/.shell/paths
 source ~/.shell/config
+source ~/.gopen.zsh
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
