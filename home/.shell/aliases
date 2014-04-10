@@ -107,6 +107,9 @@ function changeJava() {
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.$1)"
 }
 
+# Android
+alias androidSS='adb shell /system/bin/screencap -p /sdcard/screenshot.png && adb pull /sdcard/screenshot.png ~/Desktop/screenshot.png'
+
 # Vagrant
 alias vg="vagrant"
 alias vgup="vg up"
