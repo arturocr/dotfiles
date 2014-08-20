@@ -1,6 +1,6 @@
 [user]
 	name = Arturo Campos
-    email = arturo025@gmail.com
+	email = arturo025@gmail.com
 [github]
     user = arturocr
 [alias]
@@ -38,8 +38,7 @@
     changed = green
     untracked = cyan
 [core]
-    excludesfile = /Users/arturo/.gitignore
-    editor = subl -w
+	excludesfile = /Users/arturo/.gitignore
 [apply]
     whitespace = nowarn
 [difftool "Kaleidoscope"]
@@ -58,3 +57,11 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[heroku]
+	account = edify
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
