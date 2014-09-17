@@ -1,17 +1,7 @@
-# Git
-alias gst='git status'
-alias gpl='git smart-pull'
-alias gps='git push'
-alias gt='git track'
-alias gco='git co'
-alias gl='git l'
-alias glo='git lol'
-alias gcm='git cm'
-alias gun='git unstage'
-alias gts='git staged'
-alias gdf='git unstaged'
-alias ga='git add . ; git status'
-alias gau='git add -u ; git status'
+# Git Smart
+alias gup="git smart-pull"
+alias gm="git smart-merge"
+alias gl="git smart-log"
 
 # tig
 alias tst='tig status'

@@ -1,3 +1,5 @@
+unsetopt correct_all
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -13,6 +15,9 @@ ZSH_THEME="powerline"
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
+# Disable update confirmation
+DISABLE_UPDATE_PROMPT=true
+
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
 
@@ -27,7 +32,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(bower brew brew-cask git git-flow gradle grunt node npm sublime symfony2 osx vagrant)
 
 source $ZSH/oh-my-zsh.sh
-unsetopt correct_all
 
 source ~/.shell/aliases
 source ~/.shell/almendra

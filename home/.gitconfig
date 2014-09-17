@@ -1,9 +1,13 @@
 [user]
-	name = Arturo Campos
-	email = arturo025@gmail.com
+    name = Arturo Campos
+    email = arturo025@gmail.com
 [github]
     user = arturocr
 [alias]
+    undo = reset --soft HEAD^
+    ammend = commit --amend -C HEAD
+    credit = commit --amend --author "$1 <$2>" -C HEAD
+    st = status -sb
     co = checkout
     cm = commit
     # Log display from screencast, with train tracks.
@@ -11,9 +15,7 @@
     # Alternate log display from Scott Chacon
     lol = log --pretty=oneline --abbrev-commit --graph --decorate
     # Other useful aliases:
-    unstage = reset HEAD --
-    # resets all uncomitted changes and files
-    abort = reset --hard HEAD
+    unstage = reset HEAD
     staged = diff --cached
     unstaged = diff
     current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
@@ -23,30 +25,13 @@
     diff = auto
     status = auto
     branch = auto
-	ui = always
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red
-    new = cyan
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+    ui = true
 [core]
-	excludesfile = /Users/arturo/.gitignore
+    excludesfile = ~/.global-gitignore
+    editor = subl -n -w
+    autocrlf = input
 [apply]
     whitespace = nowarn
-[difftool "Kaleidoscope"]
-    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[difftool]
-    prompt = false
-[diff]
-    tool = Kaleidoscope
 [help]
     autocorrect = 1
 [status]
@@ -55,13 +40,5 @@
     # Only push branches that have been set up to track a remote branch.
     default = current
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-[heroku]
-	account = edify
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
