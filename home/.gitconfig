@@ -4,23 +4,36 @@
 [github]
     user = arturocr
 [alias]
-    undo = reset --soft HEAD^
-    ammend = commit --amend -C HEAD
-    credit = commit --amend --author "$1 <$2>" -C HEAD
-    st = status -sb
     co = checkout
-    cm = commit
-    # Log display from screencast, with train tracks.
-    l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-    # Alternate log display from Scott Chacon
-    lol = log --pretty=oneline --abbrev-commit --graph --decorate
-    # Other useful aliases:
-    unstage = reset HEAD
-    staged = diff --cached
-    unstaged = diff
-    current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
-    # Usage: git track origin/feature-123-login-form
-    track = checkout -t
+    cob = checkout -b
+    coo = !git fetch && git checkout
+    br = branch
+    st = status
+    aa = add -A .
+    cm = commit -m
+    aacm = !git add -A . && git commit -m
+    cp = cherry-pick
+    amend = commit --amend -m
+    dev = !git checkout develop && git pull origin develop
+    staging = !git checkout staging && git pull origin staging
+    master = !git checkout master && git pull origin 
+    po = push origin
+    pod = push origin develop
+    pos = push origin staging
+    pom = push origin master
+    poh = push origin HEAD
+    plo = pull origin
+    plod = pull origin develop
+    plos = pull origin staging
+    plom = pull origin master
+    ploh = pull origin HEAD
+    unstage = reset --soft HEAD^
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    f = "!git ls-files | grep -i"
+    gr = grep -Ii
+    la = "!git config -l | grep alias | cut -c 7-"
+    credit = commit --amend --author "$1 <$2>" -C HEAD
 [color]
     diff = auto
     status = auto
@@ -40,5 +53,8 @@
     # Only push branches that have been set up to track a remote branch.
     default = current
 [filter "media"]
-    clean = git-media-clean %f
-    smudge = git-media-smudge %f
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[heroku]
+	account = personal
