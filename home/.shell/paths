@@ -1,18 +1,9 @@
-# export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
-export JAVA_HOME="$(/usr/libexec/java_home)"
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 export JDK_HOME="$(/usr/libexec/java_home)"
-export ANT_HOME="/usr/share/ant"
-export CATALINA_HOME="/Library/Tomcat/Home"
 
 export DROPBOX_HOME="$HOME/Dropbox"
-# export MANPATH="/opt/local/share/man:$MANPATH"
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.4.26/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/X11/bin:$HOME/local/bin:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH"
 export GROOVY_HOME="$(brew --prefix groovy)/libexec"
 export GRAILS_HOME="$(brew --prefix grails)/libexec"
 export NODE_PATH="/usr/local/lib/node_modules"
-
-# Amazon EC2
-# export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-# export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
-# export EC2_HOME="$(brew --prefix ec2-api-tools)/jars"

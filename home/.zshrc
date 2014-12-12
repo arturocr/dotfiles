@@ -1,5 +1,3 @@
-unsetopt correct_all
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -29,22 +27,8 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bower brew brew-cask git git-flow gradle grunt node npm sublime symfony2 osx vagrant yeoman timuxinator)
+plugins=(bower brew brew-cask git git-flow-avh gradle grunt node npm sublime symfony2 osx vagrant yeoman timuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
-source ~/.shell/aliases
-source ~/.shell/almendra
-source ~/.shell/edify
-source ~/.shell/paths
-source ~/.shell/config
-source ~/.gopen.zsh
-
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-__rvm_project_rvmrc
-
-fpath=($HOME/.zsh/func $fpath)
-typeset -U fpath
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+. ~/.zshrc.local
