@@ -1,9 +1,9 @@
 unsetopt correct_all
 
 [[ -s $HOME/.shell/aliases ]] && source $HOME/.shell/aliases
-[[ -s $HOME/.shell/almendra ]] && source $HOME/.shell/almendra
-[[ -s $HOME/.shell/edify ]] && source $HOME/.shell/edify
 [[ -s $HOME/.shell/paths ]] && source $HOME/.shell/paths
+[[ -s $DROPBOX_HOME/Edify/shell/edify ]] && source $DROPBOX_HOME/Edify/shell/edify
+[[ -s $DROPBOX_HOME/almendra/shell/almendra ]] && source $DROPBOX_HOME/almendra/shell/almendra
 [[ -s $HOME/.shell/config ]] && source $HOME/.shell/config
 [[ -s $HOME/.gopen.zsh ]] && source $HOME/.gopen.zsh
 

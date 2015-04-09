@@ -1,5 +1,6 @@
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 export JDK_HOME="$(/usr/libexec/java_home)"
+export ANT_HOME="$(brew --prefix ant)"
 
 export DROPBOX_HOME="$HOME/Dropbox"
 export ANDROID_HOME=/usr/local/opt/android-sdk
