@@ -1,5 +1,6 @@
 unsetopt correct_all
 
+[[ -s $HOME/.iterm2_shell_integration.zsh ]] && source $HOME/.iterm2_shell_integration.zsh
 [[ -s $HOME/.shell/aliases ]] && source $HOME/.shell/aliases
 [[ -s $HOME/.shell/paths ]] && source $HOME/.shell/paths
 [[ -s $DROPBOX_HOME/Edify/shell/edify ]] && source $DROPBOX_HOME/Edify/shell/edify

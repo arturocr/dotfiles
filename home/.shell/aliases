@@ -65,6 +65,7 @@ alias k9="killall -9"
 function killnamed () {
 	ps ax | grep $1 | cut -d ' ' -f 2 | xargs kill
 }
+alias unfreezeDock="killall ibtoold pboard Dock"
 
 function zipr() {
 	zip -r $1.zip $1
