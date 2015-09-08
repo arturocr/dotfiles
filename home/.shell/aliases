@@ -3,6 +3,11 @@ alias gup="git smart-pull"
 alias gm="git smart-merge"
 alias gl="git smart-log"
 
+# Git commit search
+git-find() {
+  git log -i --grep=$1
+}
+
 # tig
 alias tst='tig status'
 
