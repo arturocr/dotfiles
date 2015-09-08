@@ -4,7 +4,7 @@ alias gm="git smart-merge"
 alias gl="git smart-log"
 
 # Git commit search
-git-find() {
+function git-find() {
   git log -i --grep=$1
 }
 
