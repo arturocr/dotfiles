@@ -104,6 +104,12 @@ function changeJava() {
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.$1)"
 }
 
+function getConsoleExclude() {
+  echo "^((?!$1).)+$" | pbcopy
+  echo "^((?!$1).)+$"
+  echo "The regex has been copied to the clipboard!"
+}
+
 # Android
 alias androidSS='adb shell /system/bin/screencap -p /sdcard/screenshot.png && adb pull /sdcard/screenshot.png ~/Desktop/screenshot.png'
 
