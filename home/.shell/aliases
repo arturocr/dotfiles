@@ -134,3 +134,14 @@ alias atn="clear ; cd ~/Sites/atheneo ; echo '========================== Atheneo
 alias atnmate="subl ~/Sites/atheneo"
 alias atnssh="ssh dev@dev.atheneo.net"
 alias atninfo="subl $DROPBOX_HOME/freelance/Knowledge\ Elements/server\ notes.yml"
+
+# Fix cam
+function fixCam() {
+  sudo killall VDCAssistant
+  sudo killall AppleCameraAssistant
+}
+
+# Fix mic
+function fixMic() {
+  sudo killall coreaudiod
+}
