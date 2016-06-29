@@ -161,3 +161,7 @@ alias nginx.logs.error='tail -250f /usr/local/etc/nginx/logs/error.log'
 alias nginx.logs.access='tail -250f /usr/local/etc/nginx/logs/access.log'
 alias nginx.logs.default.access='tail -250f /usr/local/etc/nginx/logs/default.access.log'
 alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/default-ssl.access.log'
+
+# NPM List
+alias ng="npm list -g --depth=0 2>/dev/null"
+alias nl="npm list --depth=0 2>/dev/null"
