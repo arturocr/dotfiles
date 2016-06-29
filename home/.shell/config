@@ -3,8 +3,6 @@ export MAVEN_OPTS="$JAVA_OPTS"
 export ANT_OPTS="$JAVA_OPTS"
 export GRADLE_OPTS="$JAVA_OPTS"
 export JPDA_ADDRESS="8002"
-export _JAVA_OPTIONS="-Xms1024m -Xmx2048m -Xss512m -XX:MaxPermSize=2g -XX:-UseGCOverheadLimit -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=1024m -XX:MaxPermSize=2048m"
 
 # Set Sublime Text as default text editor
 export EDITOR="subl -n"

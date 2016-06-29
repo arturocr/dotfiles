@@ -129,12 +129,6 @@ alias apachedown="sudo apachectl stop"
 alias apacherestart="sudo apachectl restart"
 alias apachetest="sudo apachectl -t"
 
-# Freelance
-alias atn="clear ; cd ~/Sites/atheneo ; echo '========================== Atheneo ========================='"
-alias atnmate="subl ~/Sites/atheneo"
-alias atnssh="ssh dev@dev.atheneo.net"
-alias atninfo="subl $DROPBOX_HOME/freelance/Knowledge\ Elements/server\ notes.yml"
-
 # Fix cam
 function fixCam() {
   sudo killall VDCAssistant
