@@ -17,7 +17,7 @@ alias tst='tig status'
 alias reload='source ~/.zshrc'
 alias edit-zsh='subl ~/.zshrc'
 alias edit-hosts="sudo subl /etc/hosts"
-alias serve="python -m SimpleHTTPServer"
+alias sserve="python -m SimpleHTTPServer"
 alias psx="ps ax | grep $1"
 alias flushdnscache="sudo killall -HUP mDNSResponder"
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
@@ -34,8 +34,8 @@ alias ...="cd ../.."
 # Also, clear Apple’s System Logs to improve shell startup speed
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
-# My Code folder
-code() {
+# My dev folder
+dev() {
   cd ~/Projects/
 }
 
