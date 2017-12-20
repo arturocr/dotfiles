@@ -1,7 +1,7 @@
 [user]
     name = Arturo Campos
     email = arturo025@gmail.com
-	signingkey = 12E46BFA
+    signingkey = 97714B2212E46BFA
 [github]
     user = arturocr
 [alias]
@@ -64,19 +64,13 @@
     smudge = git hawser smudge %f
     required = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [commit]
-	gpgsign = true
+    gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg
+    program = /usr/local/bin/gpg
