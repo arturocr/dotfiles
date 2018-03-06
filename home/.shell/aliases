@@ -165,3 +165,10 @@ alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/defaul
 # NPM List
 alias ng="npm list -g --depth=0 2>/dev/null"
 alias nl="npm list --depth=0 2>/dev/null"
+
+# Docker
+alias dockup="docker-compose up"
+alias dockdwn="docker-compose down"
+alias dockbld="docker-compose build"
+alias dockstp="docker-compose stop"
+alias dockprn="docker system prune -a"
