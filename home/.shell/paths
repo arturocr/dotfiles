@@ -3,8 +3,6 @@ export JDK_HOME="$(/usr/libexec/java_home)"
 export ANT_HOME="$(brew --prefix ant)"
 
 export DROPBOX_HOME="$HOME/Dropbox"
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH="/usr/local/share/npm/bin:$HOME/.npm-packages/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH:`yarn global bin`"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export GROOVY_HOME="$(brew --prefix groovy)/libexec"
 export GRAILS_HOME="$(brew --prefix grails)/libexec"
-export NODE_PATH="/usr/local/lib/node_modules"

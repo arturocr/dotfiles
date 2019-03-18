@@ -193,3 +193,10 @@ function _completemarks {
 }
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
+
+
+# EOS CR
+## EOS Local
+alias cleos='docker exec -i eoslocal_eosio cleos -u http://eosio:8888 --wallet-url http://wallet:8901'
+alias eosio='docker exec -i eoslocal_eosio bash'
+alias unlock_eoslocal='docker exec -i eoslocal_eosio ./scripts/unlock.sh'
