@@ -1,7 +1,0 @@
-#!/bin/bash
-until [ "`curl --silent --connect-timeout 1 -I http://localhost:8080 | grep 'Coyote'`" != "" ];
-do
-  echo "--- Tomcat is not ready, waiting for it"
-  sleep 8
-done
-echo "Tomcat is ready!"

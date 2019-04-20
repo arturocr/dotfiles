@@ -3,6 +3,6 @@ export JDK_HOME="$(/usr/libexec/java_home)"
 export ANT_HOME="$(brew --prefix ant)"
 
 export DROPBOX_HOME="$HOME/Dropbox"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export GROOVY_HOME="$(brew --prefix groovy)/libexec"
 export GRAILS_HOME="$(brew --prefix grails)/libexec"
