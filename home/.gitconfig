@@ -1,6 +1,6 @@
 [user]
-	name = Arturo Campos
-	email = arturo025@gmail.com
+    name = Arturo Campos
+    email = arturo025@gmail.com
     signingkey = 97714B2212E46BFA
 [github]
     user = arturocr
@@ -41,10 +41,10 @@
     branch = auto
     ui = true
 [core]
-	excludesfile = ~/.global-gitignore
+    excludesfile = ~/.global-gitignore
     editor = subl -n -w
     autocrlf = input
-	ignorecase = false
+    ignorecase = false
 [apply]
     whitespace = nowarn
 [help]
@@ -66,12 +66,12 @@
     required = true
 [filter "lfs"]
     clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
     required = true
 [credential]
     helper = osxkeychain
 [commit]
-	gpgsign = true
+    gpgsign = true
 [gpg]
-	program = gpg
+    program = gpg
