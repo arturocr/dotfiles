@@ -34,8 +34,8 @@ source $ZSH/oh-my-zsh.sh
 . ~/.zshrc.local
 
 # Pure - Pretty, minimal and fast ZSH prompt: https://git.io/6LHDOw
-autoload -U promptinit; promptinit
-prompt pure
+# autoload -U promptinit; promptinit
+# prompt pure
 
 # NVM 
 export NVM_DIR="$HOME/.nvm"
@@ -61,3 +61,8 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# fnm
+eval "$(fnm env --multi)"

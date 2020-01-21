@@ -65,8 +65,12 @@ alias o='open . &'
 alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 
-function canary(){
-   open -a "Google Chrome Canary" --args --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-user-data" $1
+function canary() {
+  open -a "Google Chrome Canary" --args --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-user-data" $1
+}
+
+function freshChrome() {
+  open -a "Google Chrome" --args --user-data-dir=/dev/null
 }
 
 function changeJava() {
