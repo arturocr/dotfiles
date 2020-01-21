@@ -75,3 +75,9 @@
     gpgsign = true
 [gpg]
     program = gpg
+[includeIf "gitdir/i:~/Code/adia/"]
+    path = adia.gitconfig
+[includeIf "gitdir/i:/Volumes/R2/"]
+    path = arturocr.gitconfig
+[includeIf "gitdir/i:/Sandbox/gl/"]
+    path = gl.gitconfig
