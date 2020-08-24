@@ -1,0 +1,19 @@
+export JAVA_OPTS="-server -Xms1024m -Xmx2048m -XX:MaxPermSize=2g -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+PrintVMOptions"
+export MAVEN_OPTS="$JAVA_OPTS"
+export ANT_OPTS="$JAVA_OPTS"
+export GRADLE_OPTS="$JAVA_OPTS"
+export JPDA_ADDRESS="8002"
+
+# Set VSCode as default text editor
+export EDITOR='subl -w'
+
+# Prefer US English and use UTF-8
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# Use 256-colors mode
+export TERM="xterm-256color"
+
+# Delete line with CMD + Delete
+bindkey "^X\\x7f" backward-kill-line

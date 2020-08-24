@@ -1,0 +1,77 @@
+[user]
+    name = Arturo Campos
+    email = inbox@arturocr.com
+    signingkey = 97714B2212E46BFA
+[github]
+    user = arturocr
+[alias]
+    co = checkout
+    cob = checkout -b
+    coo = !git fetch && git checkout
+    br = branch
+    st = status
+    aa = add -A .
+    cm = commit -m
+    aacm = !git add -A . && git commit -m
+    cp = cherry-pick
+    amend = commit --amend -m
+    dev = !git checkout develop && git pull origin develop
+    staging = !git checkout staging && git pull origin staging
+    master = !git checkout master && git pull origin 
+    po = push origin
+    pod = push origin develop
+    pos = push origin staging
+    pom = push origin master
+    poh = push origin HEAD
+    plo = pull origin
+    plod = pull origin develop
+    plos = pull origin staging
+    plom = pull origin master
+    ploh = pull origin HEAD
+    unstage = reset --soft HEAD^
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    f = "!git ls-files | grep -i"
+    gr = grep -Ii
+    la = "!git config -l | grep alias | cut -c 7-"
+    credit = commit --amend --author "$1 <$2>" -C HEAD
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+[core]
+    excludesfile = ~/.global-gitignore
+    editor = subl -n -w
+    autocrlf = input
+    ignorecase = false
+[apply]
+    whitespace = nowarn
+[help]
+    autocorrect = 1
+[status]
+    submodule = 1
+[push]
+    # Only push branches that have been set up to track a remote branch.
+    default = current
+[filter "media"]
+    required = true
+    clean = git media clean %f
+    smudge = git media smudge %f
+[heroku]
+    account = personal
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[credential]
+    helper = osxkeychain
+[commit]
+    gpgsign = true
+[gpg]
+    program = gpg

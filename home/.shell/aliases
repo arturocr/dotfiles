@@ -1,0 +1,95 @@
+# Command Enhancements
+
+# Utility
+alias reload='source ~/.zshrc'
+alias edit-hosts="sudo $EDITOR /etc/hosts"
+alias sserve="python -m SimpleHTTPServer"
+alias psx="ps ax | grep $1"
+alias flushdnscache="sudo killall -HUP mDNSResponder"
+alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Quicker cd
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Empty the Trash on all mounted volumes and the main HDD
+# Also, clear Apple’s System Logs to improve shell startup speed
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+
+# Common -- Some are from Damian Conway
+alias ls='ls -G'
+alias a='ls -A' # -A all except literal . ..
+alias la="ls -A -l -G"
+alias h='history'
+alias l.='ls -d .[^.]*'
+alias l='ls -lhGt'  # -l long listing, most recent first
+                    # -G color
+
+function take() {
+    mkdir -p "$1"
+    cd "$1"
+}
+
+alias e='exit'
+alias k9="killall -9"
+function killnamed () {
+	ps ax | grep $1 | cut -d ' ' -f 2 | xargs kill
+}
+alias unfreezeDock="killall ibtoold pboard Dock"
+
+function zipr() {
+	zip -r $1.zip $1
+}
+
+# Finder
+alias o='open . &'
+
+# Processes
+alias tu='top -o cpu' # cpu
+alias tm='top -o vsize' # memory
+
+# Fix cam
+function fixCam() {
+  sudo killall VDCAssistant
+  sudo killall AppleCameraAssistant
+}
+
+# Fix mic
+function fixMic() {
+  sudo killall coreaudiod
+}
+
+# NPM List
+alias npm-g="npm list -g --depth=0 2>/dev/null"
+alias npm-l="npm list --depth=0 2>/dev/null"
+
+# Docker
+alias dockup="docker-compose up"
+alias dockdwn="docker-compose down"
+alias dockbld="docker-compose build"
+alias dockstp="docker-compose stop"
+alias dockprn="docker system prune -a"
+
+# Jumping around :)
+# Credit: http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
+export MARKPATH=$HOME/.marks
+function jump { 
+  cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+}
+function mark { 
+  mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
+}
+function unmark { 
+  rm -i "$MARKPATH/$1"
+}
+function marks {
+	\ls -l "$MARKPATH" | tail -n +2 | sed 's/  / /g' | cut -d' ' -f9- | awk -F ' -> ' '{printf "%-10s -> %s\n", $1, $2}'
+}
+function _completemarks {
+  reply=($(ls $MARKPATH))
+}
+compctl -K _completemarks jump
+compctl -K _completemarks unmark
