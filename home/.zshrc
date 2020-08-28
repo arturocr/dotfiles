@@ -75,6 +75,7 @@ source $ZSH/oh-my-zsh.sh
 . ~/.shell/.zshrc.local
 
 # Pure - Pretty, minimal and fast ZSH prompt: https://git.io/6LHDOw
+PURE_PROMPT_SYMBOL=⚡
 fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure

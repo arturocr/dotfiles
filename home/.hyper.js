@@ -9,7 +9,7 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 16,
+    fontSize: 15,
 
     // font family with optional fallbacks
     fontFamily: '"Victor Mono", "Cascadia Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -26,12 +26,6 @@ module.exports = {
     // letter spacing as a relative unit
     letterSpacing: 0,
 
-    windowSize: [1080, 720],
-
-    wickedBorder: true,
-
-    padding: '10px',
-
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
 
@@ -42,7 +36,7 @@ module.exports = {
     cursorShape: 'BLOCK',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',
@@ -144,14 +138,6 @@ module.exports = {
     webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    hyperBorder: {
-		// animate: {
-		// 	duration: '0.2s' // default is 16s
-		// },
-		// borderColors: ['#FF2C70', '#5D3DE1', '#fad000', '#6937FF'],
-		borderColors: ['#FF2C70', '#6937FF'],
-		borderWidth: '3px'
-	}
   },
 
   // a list of plugins to fetch and install from npm
@@ -161,12 +147,21 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyperterm-atom-dark",
+    "hyperterm-paste",
+    "hyper-quit",
     "hyperlinks",
-    "hyper-statusline",
-    "hyper-tab-icons",
-    "hyper-highlight-active-pane"
+    "git-falcon9",
+    "hyper-atom-dark-transparent",
+    "hyper-tabs-enhanced",
+    "hyper-statusline"
   ],
+
+  hyperTabs: {
+    border: true,
+    closeAlign: 'right',
+    tabIconsColored: true,
+    trafficButtons: true,
+  },
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
