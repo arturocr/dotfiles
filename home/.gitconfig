@@ -1,6 +1,6 @@
 [user]
 	name = Arturo Campos
-	email = inbox@arturocr.com
+	email = info@arturocampos.dev
 	signingkey = 97714B2212E46BFA
 [github]
 	user = arturocr
@@ -17,7 +17,7 @@
 	amend = commit --amend -m
 	dev = !git checkout develop && git pull origin develop
 	staging = !git checkout staging && git pull origin staging
-	master = !git checkout master && git pull origin 
+	master = !git checkout master && git pull origin
 	po = push origin
 	pod = push origin develop
 	pos = push origin staging
