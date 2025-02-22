@@ -17,3 +17,5 @@ export TERM="xterm-256color"
 
 # Delete line with CMD + Delete
 bindkey "^X\\x7f" backward-kill-line
+
+export GPG_TTY=$(tty)

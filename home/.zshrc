@@ -76,7 +76,7 @@ source $ZSH/oh-my-zsh.sh
 
 PURE_GIT_PULL=0
 PURE_PROMPT_SYMBOL=⚡️
-fpath+=$HOME/.zsh/pure
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 
