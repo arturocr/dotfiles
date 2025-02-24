@@ -69,7 +69,7 @@
 			}
 		],
 		"hyperBorder": {
-			"borderColors": ["#fc1da7", "#20C5C6"],
+			"borderColors": ["#6BD425", "#F56960"],
 			"borderWidth": "8px"
 		}
 	},

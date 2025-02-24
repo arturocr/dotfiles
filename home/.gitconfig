@@ -42,7 +42,7 @@
 	ui = true
 [core]
 	excludesfile = ~/.global-gitignore
-	editor = subl -n -w
+	editor = code -w
 	autocrlf = input
 	ignorecase = false
 [apply]
