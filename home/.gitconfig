@@ -42,7 +42,7 @@
 	ui = true
 [core]
 	excludesfile = ~/.global-gitignore
-	editor = code -w
+	editor = agy --wait
 	autocrlf = input
 	ignorecase = false
 [apply]
