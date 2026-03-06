@@ -86,3 +86,13 @@ eval "$(fnm env --use-on-cd)"
 complete -C aws_completer aws
 
 source <(kubectl completion zsh)
+
+# pnpm
+export PNPM_HOME="/Users/arturo/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export PATH="$HOME/.local/bin:$HOME/.antigravity/antigravity/bin:$PATH"

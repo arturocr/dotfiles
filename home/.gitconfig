@@ -54,6 +54,7 @@
 [push]
 	# Only push branches that have been set up to track a remote branch.
 	default = current
+	autoSetupRemote = true
 [filter "media"]
 	required = true
 	clean = git media clean %f
@@ -74,6 +75,8 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg
+	program = /opt/homebrew/bin/gpg
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
