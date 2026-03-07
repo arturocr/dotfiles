@@ -95,7 +95,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-export PATH="$HOME/.local/bin:$HOME/.antigravity/antigravity/bin:$PATH"
-
 # Enable Claude Code Experimental Agent Teams
 export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
